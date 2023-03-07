@@ -1,16 +1,41 @@
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+
+import { styles } from '../styles';
+import { navLinks } from '../constants';
+import { logo, menu, close } from '../assets';
+
 const Navbar = () => {
+    const [active, setActive] = useState('');
+
+
     return (
-        <nav className="flex items-center justify-between flex-wrap bg-primary p-6">
-            <div className="flex items-center flex-shrink-0 text-white mr-6">
-                <span className="font-semibold text-xl tracking-tight">Portfolio</span>
-            </div>
-            <div className="block lg:hidden">
-                <button className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-                    <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
+        <nav
+            className={`${styles.paddingX} w-full flex-items-center py-5 fixed top-0 z-20 bg-primary`}
+        >
+            <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+                <Link
+                    to='/'
+                    className='flex items-center gap-2'
+                    onClick={() => {
+                        setActive("");
+                        window.scrollTo(0, 0);
+                    }}
+                >
+                    <img src={logo} alt='logo' className='w-20 h-10 object-contain' />
+                </Link>
+                <ul className='list-none hidden sm:flex flex-row gap-10'>
+                    {navLinks.map((nav) => (
+                        <li
+                            key={nav.id}
+                            className={`${active === nav.title ? "text-white" : "text-secondary"
+                                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                            onClick={() => setActive(nav.title)}
+                        >
+                            <a href={`#${nav.id}`}>{nav.title}</a>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </nav>
     )
