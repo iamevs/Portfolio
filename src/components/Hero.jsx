@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 
 import { styles } from "../styles";
 
-import { ComputersCanvas } from "./canvas/index";
 import herobg from '../assets/herobg.svg';
 
 const Hero = () => {
@@ -36,8 +35,6 @@ const Hero = () => {
               </p>
             </div>
           </div>
-
-        {/* <ComputersCanvas /> */}
 
         </section>
       );

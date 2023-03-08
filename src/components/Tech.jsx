@@ -1,57 +1,49 @@
+import React from "react";
+import Tilt from "react-tilt";
+import { motion } from "framer-motion";
+import { services } from "../constants/index.js";
+import { SectionWrapper } from "../hoc/index.js";
+import { fadeIn, textVariant } from "../utils/motion.js";
+import { technologies } from "../constants/index.js";
+
+const ServiceCard = ({ index, name, icon }) => (
+    <Tilt className='xs:w-[250px] w-full'>
+        <motion.div
+            variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+            className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+        >
+            <div
+                options={{
+                    max: 45,
+                    scale: 1,
+                    speed: 450,
+                }}
+                className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+            >
+                <img
+                    src={icon}
+                    alt='web-development'
+                    className='w-16 h-16 object-contain'
+                />
+
+                <h3 className='text-white text-[20px] font-bold text-center'>
+                    {name}
+                </h3>
+            </div>
+        </motion.div>
+    </Tilt>
+);
+
 const Tech = () => {
     return (
-        <div className="relative z-0 bg-primary">
-            <div className="bg-tech-pattern bg-cover bg-no-repeat bg-center">
-                <div className="container mx-auto px-6 py-20">
-                    <h2 className="text-4xl font-bold text-white text-center mb-8">
-                        Technologies I use
-                    </h2>
-                    <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-                        <div className="flex items-center">
-                            <img
-                                className="w-12 h-12 mr-4"
-                                src="https://img.icons8.com/color/48/000000/react-native.png"
-                                alt="React"
-                            />
-                            <div className="text-white">
-                                <p className="font-bold">React</p>
-                                <p className="text-sm">Frontend</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center">
-                            <img
-                                className="w-12 h-12 mr-4"
-                                src="https://img.icons8.com/color/48/000000/nodejs.png"
-                                alt="Node"
-                            />
-                            <div className="text-white">
-                                <p className="font-bold">Node</p>
-                                <p className="text-sm">Backend</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center">
-                            <img
-                                className="w-12 h-12 mr-4"
-                                src="https://img.icons8.com/color/48/000000/mongodb.png"
-                                alt="MongoDB"
-                            />
-                            <div className="text-white">
-                                <p className="font-bold">MongoDB</p>
-                                <p className="text-sm">Database</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center">
-                            <img
-                                className="w-12 h-12 mr-4"
-                                src="https://img.icons8.com/color/48/000000/javascript.png"
-                                alt="JavaScript"
-                            />
-                        </div>
-                    </div>
-                </div>
+        <>
+            <div className='mt-20 flex flex-wrap gap-10'>
+                {technologies.map((tech, index) => (
+                    <ServiceCard key={tech.name} index={index} {...tech} />
+                ))}
             </div>
-        </div>
-    )
-}
+        </>
+    );
+};
 
-export default Tech
+export default SectionWrapper(Tech, "tech");
