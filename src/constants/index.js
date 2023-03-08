@@ -15,10 +15,7 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  requator,
   carrent,
   jobit,
   tripguide,
@@ -31,8 +28,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
   },
   {
     id: "contact",
@@ -48,10 +45,6 @@ const services = [
   {
     title: "React Native Developer",
     icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
   },
   {
     title: "Open Source Contributor",
@@ -118,7 +111,7 @@ const experiences = [
   {
     title: "Web Developer",
     company_name: "Requator",
-    icon: starbucks,
+    icon: requator,
     iconBg: "#383E56",
     date: "November 2022",
     points: [
@@ -128,46 +121,6 @@ const experiences = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Requator",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "November 2022",
-    points: [
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Requator",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "November 2022",
-    points: [
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Requator",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "November 2022",
-    points: [
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, sapiente.",
-    ],
-  },
-
 ];
 
 const testimonials = [

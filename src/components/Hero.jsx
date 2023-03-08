@@ -13,10 +13,9 @@ const Hero = () => {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
             backgroundPositionY: '0px',
             backgroundPositionX: '0px',
-            transform: 'translateY(0px)'
+            backgroundAttachment: 'fixed',
         }}
         >
           <div
@@ -38,7 +37,7 @@ const Hero = () => {
             </div>
           </div>
 
-        {/* <ComputersCanvas /> */}
+        <ComputersCanvas />
 
         </section>
       );

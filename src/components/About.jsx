@@ -47,7 +47,7 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
             >
-                A determined web developer who communicate well with others
+                A determined FullStack developer who communicate well with others
                 and am adaptable to change. I'm pursuing my second year of
                 college in Kumaraguru college of technology, Coimbatore
 
